@@ -1,7 +1,7 @@
 {
-  "name": "jwr-theme-tailwinds",
+  "name": "jwr-alea-tailwinds",
   "version": "1.0.0",
-  "description": "Tailwinds for JwR theme",
+  "description": "Tailwinds for JwR-Alea theme",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
@@ -18,9 +18,9 @@
   "keywords": [
     "Wordpress",
     "theme",
-    "basic",
-    "initial",
-    "state",
+    "alea",
+    "Consult",
+    "Diet",
     "tailwinds",
     "custom"
   ],

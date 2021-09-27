@@ -1,1 +1,1 @@
-console.log("%cTheme designed and developed by Gabino Ramírez from https://themes.gabinoramirez.com/", "color:green");
+console.log("%cTheme designed and developed by Gabino Ramírez from https://themes.gabinoramirez.com/ for Cristian Montesinos at https://cristianmontesinos.es/", "color:red");

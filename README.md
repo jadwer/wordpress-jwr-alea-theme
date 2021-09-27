@@ -1,5 +1,7 @@
-#Basic JadweR Wordpress Theme
+# JadweR Wordpress Theme for Alea Consulta Dietética
 
-This theme is a simple and minimalist base focus on the easiest customization for customers.
+This theme was developed for Alea Consulta Dietética via Cristian Montesinos.
 
-The style is under Tailwind, for more details, you can chec the package.json.
+The styling is using Tailwind
+
+For the correct function of this Theme, you'll need the correct plugins.
