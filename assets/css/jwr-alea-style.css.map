@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAP,iHAAO;AACP,OAAO,CAAP,uHAAO;AACP,OAAO,CAAP,sHAAO",
+    "sources": [
+        "jwr-alea-style.scss"
+    ],
+    "names": [],
+    "file": "jwr-alea-style.css"
+}
