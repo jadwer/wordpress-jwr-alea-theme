@@ -7,17 +7,39 @@ function JwR_Alea_dependencies()
 }
 add_action('admin_notices', 'JwR_Alea_dependencies');
 
+// function jwr_alea_theme_enqueue_styles() {
 
-function add_jwr_alea_theme_styles()
-{
-    wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style('page-style', get_template_directory_uri() . '/assets/css/style.css');
+//     $parent_style = 'parent-style';
+//     $parent_style = 'parent-style-add';
+   
+//     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+//     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/assets/css/style.css' );
+//     wp_enqueue_style( 'child-style',
+//     get_stylesheet_directory_uri() . '/style.css',
+//     array( $parent_style ),
+//     wp_get_theme()->get('Version')
+//     );
+//     wp_enqueue_style( 'child-style-add',
+//     get_stylesheet_directory_uri() . '/assets/css/style.css',
+//     array( $parent_style ),
+//     wp_get_theme()->get('Version')
+//     );
+//    }
+//    add_action( 'wp_enqueue_scripts', 'jwr_alea_theme_enqueue_styles' );
+
+function jwr_alea_theme_enqueue_styles() {
+    wp_enqueue_style( 'child-style-add',
+    get_stylesheet_directory_uri() . '/assets/css/style.css',
+    array( 'page-style-css' ),
+    wp_get_theme()->get('Version')
+    );
 }
-add_action('wp_enqueue_scripts', 'add_jwr_alea_theme_styles');
+   add_action( 'wp_enqueue_scripts', 'jwr_alea_theme_enqueue_styles' );
 
-function add_jwr_alea_theme_scripts()
+
+    function add_jwr_alea_theme_scripts()
 {
-    wp_enqueue_script('page-scripts', get_template_directory_uri() . '/assets/js/scripts.js');
+    wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/assets/js/scripts.js');
 }
 add_action('wp_enqueue_scripts', 'add_jwr_alea_theme_scripts');
 
@@ -48,10 +70,6 @@ function register_alea_menu()
     );
 }
 add_action('init', 'register_alea_menu');
-// $term = get_term_by('name', 'CRM Pages', 'nav_menu');
-// $menu_id = $term->term_id;
-// if($menu_id != 0){
-//     $locations = get_theme_mod('nav_menu_locations');
-//     $locations['lateral-menu'] = $menu_id;
-//     set_theme_mod('nav_menu_locations', $locations);
-// }
+
+wp_register_style( 'Tailwindcss', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' );
+wp_enqueue_style('Tailwindcss');
