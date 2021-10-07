@@ -71,5 +71,5 @@ function register_alea_menu()
 }
 add_action('init', 'register_alea_menu');
 
-wp_register_style( 'Tailwindcss', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' );
-wp_enqueue_style('Tailwindcss');
+// wp_register_style( 'Tailwindcss', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' );
+// wp_enqueue_style('Tailwindcss');
