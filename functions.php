@@ -1,4 +1,17 @@
 <?php
+add_action( 'init', 'jwr_crm_session_start', 1 );
+add_action( 'wp_logout', 'jwr_crm_session_end' );
+add_action( 'wp_login', 'jwr_crm_session_end' );
+
+function jwr_crm_session_start() {
+    if( ! session_id() ) {
+        session_start();
+    }
+}
+
+function jwr_crm_session_end() {
+    session_destroy();
+}
 
 function JwR_Alea_dependencies()
 {
