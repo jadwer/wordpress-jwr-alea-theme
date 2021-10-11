@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-    <main class="flex w-10/12 p-5 bg-white">
-        <section class="main-content">
+    <main class="flex w-full justify-center p-5 bg-white">
+        <section class="main-content w-full justify-center ">
             <?php get_template_part('./template-parts/page-content') ?>
         </section>
     </main>

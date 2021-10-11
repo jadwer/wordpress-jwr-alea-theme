@@ -29,4 +29,4 @@
             <?php wp_loginout('index.php'); ?>
         </div>
     </header>
-    <div class="flex pt-28">
+    <div class="container mx-auto flex pt-28 justify-center ">
