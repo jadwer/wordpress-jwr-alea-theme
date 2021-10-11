@@ -53,6 +53,14 @@ function jwr_alea_theme_enqueue_styles() {
     function add_jwr_alea_theme_scripts()
 {
     wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/assets/js/scripts.js');
+
+    wp_enqueue_script('event_js', get_stylesheet_directory_uri() . '/assets/js/events.js', array('jquery'));
+
+    wp_localize_script('event_js', 'ajax_var', array(
+        'url'    => rest_url('/alea-crm/send-status'),
+        'nonce'  => wp_create_nonce('wp_rest'),
+    ));
+
 }
 add_action('wp_enqueue_scripts', 'add_jwr_alea_theme_scripts');
 
